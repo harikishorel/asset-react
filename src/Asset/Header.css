@@ -25,7 +25,12 @@ a {
 
 .logo {
   margin: 0;
+  margin-left: 3rem;
   font-size: 1.45em;
+}
+
+.profile{
+margin-right: 3rem;
 }
 
 .main-nav {
