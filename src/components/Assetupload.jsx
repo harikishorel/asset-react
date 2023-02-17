@@ -1,6 +1,7 @@
 import { useState } from "react";
 import QRCode from "qrcode.react";
 import "./Assetupload.css";
+import { useNavigate } from "react-router-dom";
 
 const Assetupload = () => {
     const [username, setUsername] = useState("");
@@ -37,6 +38,7 @@ const Assetupload = () => {
         const qrString = `${username}, ${productName}, ${warrantyFrom}, ${warrantyTo}, ${productDetails}, ${warrantyFile}`;
         setQrData(qrString);
     };
+    useNavigate()
     
 return (
         <div className="container">
