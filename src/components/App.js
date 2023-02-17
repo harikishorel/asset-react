@@ -1,13 +1,14 @@
 import React from "react";
-import Assetupload from "./components/QR/Assetupload.jsx";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import mongo from "./components/QR/mongo.py";
+import Assetupload from "./Assetupload.jsx";
+import Header from "./Head";
+import Manufacturemenu from "./Manufacturemenu";
 
 const App = () => {
   return (
     <div>
+      <Header />
+      <Manufacturemenu />
       <Assetupload />
-      <mongo />
     </div>
   );
 };

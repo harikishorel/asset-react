@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./ViewPage.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Menu from "./components/header";
 
-const App = () => {
+const ViewPage = () => {
   return (
     <div>
       <Menu />
@@ -57,4 +57,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ViewPage;
