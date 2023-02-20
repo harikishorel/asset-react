@@ -1,12 +1,20 @@
 import React from "react";
 import "./ViewPage.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Menu from "./components/header";
+import Container from "react-bootstrap/Container";
+
+import Navbar from "react-bootstrap/Navbar";
 
 const ViewPage = () => {
   return (
     <div>
-      <Menu />
+      <>
+        <Navbar style={{ backgroundColor: "#461b7e" }} variant="dark">
+          <Container>
+            <Navbar.Brand href="#home">AssetWarranty</Navbar.Brand>
+          </Container>
+        </Navbar>
+      </>
       <br />
       <h1 className="title"> Product Details </h1>
       <br />
