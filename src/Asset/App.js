@@ -1,31 +1,31 @@
-import React from "react";
-import Assetupload from "../components/Assetupload.jsx";
-import Header from "./header";
-import Manufacturemenu from "../components/Manufacturemenu";
-import { Routes,Route } from "react-router-dom";
-import Asset from "./Asset";
-import fakedata from './Dummy-Data.json'
-import {useTable} from 'react-table'
+import React, {useState} from "react" 
 
+import './LR.css';
+import Login from './Login'
+import Register from './Register'
+import Header from './header'
+import Footer from './Footer'
+import Asset from './Asset'
+import ProductDealer from "./ProductDealer";
 
-const App = () => {
+function App() {
+  const [currentForm,setCurrentForm]=useState('login');
+  
+  const toggleForm = (formName) =>{
+    setCurrentForm(formName);
+  }
   
   return (
-    
     <div>
-      
-      {/* <Routes>
-        <Route path='Asset' element={<Asset /> } />
-      </Routes>
-      <Header />
-      <Manufacturemenu />
-      <Assetupload /> */}
-     {/* <Header/>  */}
-     
-      <Asset />
-
+    <Header />
+    
+ {/* <Login /> */}
+ {/* <Asset /> */}
+ <ProductDealer />
+ 
+    <Footer />
     </div>
   );
-};
+}
 
 export default App;

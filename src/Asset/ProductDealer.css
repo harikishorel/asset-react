@@ -100,3 +100,11 @@ tbody td {
     }
   }
   
+  .PL{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+  }

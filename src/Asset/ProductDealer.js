@@ -1,16 +1,17 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-import './Asset.css'
+import './ProductDealer.css'
 import Header from './header'
 import Search from './Search.js'
 import Box from './Box'
 
-function Asset() {
+function ProductDealer() {
 
   return (
     <body className=' Asset'>
     <div>
       <br/><br/>
+
       <h2 className='PL'> LIST OF PRODUCTS</h2><br/>
     
     <Search /><Box /><br/><br/>
@@ -30,6 +31,7 @@ function Asset() {
 <th class="column5">Warranty Period
 (Years)</th>
 <th class="column6">Retailer Name</th>
+<th class='column7'>Edit</th>
 </tr>
 </thead>
 <tbody>
@@ -40,6 +42,7 @@ function Asset() {
 <td class="column4">$999.00</td>
 <td class="column5">1</td>
 <td class="column6">$999.00</td>
+<td class="column7"><button>Edit</button></td>
 </tr>
 <tr>
 <td class="column1">2017-09-28 05:57</td>
@@ -48,6 +51,7 @@ function Asset() {
 <td class="column4">$756.00</td>
 <td class="column5">1</td>
 <td class="column6">$756.00</td>
+<td class="column7"><button>Edit</button></td>
 </tr>
 <tr>
 <td class="column1">2017-09-26 05:57</td>
@@ -56,6 +60,7 @@ function Asset() {
 <td class="column4">$22.00</td>
 <td class="column5">2</td>
 <td class="column6">$44.00</td>
+<td class="column7"><button>Edit</button></td>
 </tr>
 <tr>
 <td class="column1">2017-09-25 23:06</td>
@@ -64,6 +69,7 @@ function Asset() {
 <td class="column4">$10.00</td>
 <td class="column5">3</td>
 <td class="column6">$30.00</td>
+<td class="column7"><button>Edit</button></td>
 </tr>
 
 </tbody>
@@ -79,4 +85,4 @@ function Asset() {
       
 }
 
-export default Asset
+export default ProductDealer

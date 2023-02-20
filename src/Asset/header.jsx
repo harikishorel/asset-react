@@ -7,6 +7,7 @@ import './Header.css'
 
 function header() {
   return (
+    <body className='Header'> 
   	<header class="header">
 		<h1 class="logo"><a href="#">Assetwarranty</a></h1>
       <ul class="main-nav">
@@ -14,7 +15,7 @@ function header() {
           <li><a href="#" class='profile'>Profile</a></li>
       </ul>
 	</header> 
-
+</body>
 
   );
 }

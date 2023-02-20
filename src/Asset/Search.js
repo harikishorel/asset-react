@@ -3,13 +3,14 @@ import './Search.css'
 
 function Search() {
   return (
-    <div className='Search-bar'>
-      <form onsubmit="event.preventDefault();" role="search">
-  <label for="search">Search for stuff</label>
-  <input id="search" type="search" placeholder="Search..." autofocus required />
-  <button type="submit">Go</button>    
-</form>
-    </div>      
+    // <body className='search-bar'>
+    <div className="search-container">
+    <form class="search" action="">
+  <input  class='search-input' type="search" placeholder="Search here..." required />
+  <button className='search-btn' type="submit">Search</button>
+</form>   
+  </div>
+  // </body>
   )
 }
 
