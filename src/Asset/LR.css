@@ -4,8 +4,9 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  justify-content: space-evenly;
   background: linear-gradient(269.26deg,#4fbec2 6.59%,#3643d1 80.04%);
-  padding-right: 600px;
+  /* padding-right: 600px; */
 }
 
 .auth-form-container, .login-form, .register-form{
@@ -74,7 +75,16 @@ input{
 }
 
 .Email-btn{
-  font-size:20px;
+ 
   font-family: "Montserrat", sans-serif;
 /* font-weight: bold; */
+}
+
+.l-img{
+  
+
+ opacity: 90%;
+  padding-right: 50px;
+  width: 400px;
+  height: 450px;
 }
