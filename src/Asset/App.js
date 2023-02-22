@@ -7,6 +7,7 @@ import Header from './header'
 import Footer from './Footer'
 import Asset from './Asset'
 import ProductDealer from "./ProductDealer";
+import Dealer from "./Dealer";
 
 function App() {
   const [currentForm,setCurrentForm]=useState('login');
@@ -18,11 +19,12 @@ function App() {
   return (
     <div>
     <Header />
-{/*     
- <Login /> */}
+    <Dealer/>
+    
+ {/* <Login /> */}
  
  {/* <Asset /> */}
- <ProductDealer />
+ {/* <ProductDealer /> */}
  
     <Footer />
     </div>

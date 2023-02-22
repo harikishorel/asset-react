@@ -4,7 +4,7 @@ import './Box.css'
 function Box() {
   return (
     <div className='box-btn'>
-    <button> Add product
+    <button className='box-b'> Add product
 </button>
       
     </div>

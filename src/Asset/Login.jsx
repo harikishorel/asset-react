@@ -19,11 +19,11 @@ const Login =() => {
         <div className='auth-form-container'>
             <h2 className="Login-name">Login</h2>
             
-        <form className="login-form" >
+        <form className="login-form" action='POST' >
             <label className='Email-btn' htmlfor="email">Email</label>
-            <input  type='email' placeholder="Your email" id="email" name="email" />
+            <input  type='email' placeholder="Your email" id="email" name="email" onChange={(e)=>{setEmail(e.target.value)}} />
             <label className='Email-btn' htmlfor="password">password</label>
-            <input  type='password' placeholder="*********" id="password" name="password"/>
+            <input  type='password' placeholder="*********" id="password" name="password" onChange={(e)=>{setPassword(e.target.value)}}/>
 <button className="btn-btn1" onMouseOver={MouseEvent}>Log IN</button>
 
         </form>
