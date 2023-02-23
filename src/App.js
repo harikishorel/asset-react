@@ -1,12 +1,17 @@
+// import Carousel from "./Test/Carousel";
 import React from "react";
-import CreateDealer from "./components/Pages/CreateDealer";
-// import Dealers from "./components/Pages/Dealers";
-// import ViewPage from "./components/Pages/ViewPage";
+import { Routes, Route } from "react-router-dom";
+import Addproduct from "./Test/Addproduct";
+// import ProductDealer from "./Test/ProductDealer";
 
 function App() {
   return (
     <div>
-      <CreateDealer />
+      <Routes>
+        {/* <Route path="/" element={<Carousel />} />
+        <Route path="/dealer" element={<ProductDealer />} /> */}
+        <Route path="/" element={<Addproduct />} />
+      </Routes>
     </div>
   );
 }

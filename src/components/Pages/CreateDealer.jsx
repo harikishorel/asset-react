@@ -1,29 +1,20 @@
 import React from "react";
 import "./CreateDealer.css";
 import "bootstrap/dist/css/bootstrap.css";
-// import Container from "react-bootstrap/Container";
 
-// import Navbar from "react-bootstrap/Navbar";
 import Header from "../repeated/header";
 
 const CreateDealer = () => {
   return (
     <div>
       <Header />
-      {/* <>
-        <Navbar style={{ backgroundColor: "#461b7e" }} variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">AssetWarranty</Navbar.Brand>
-          </Container>
-        </Navbar>
-      </> */}
       <br />
       <h1 style={{ display: "flex", justifyContent: "center" }}>
         Add a Dealer
       </h1>
       <br />
-      <br />
 
+      <br />
       <div class="group">
         <input required="" type="text" class="input" />
         <span class="highlight"></span>
