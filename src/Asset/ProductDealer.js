@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import './ProductDealer.css'
-import Header from './header'
+import Header from './Header'
 import Search from './Search.js'
 import Box from './Box'
 

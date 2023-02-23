@@ -1,12 +1,13 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import './Asset.css'
-import Header from './header'
+import Header from './Header'
 import Search from './Search.js'
 import Box from './Box'
+import { useLocation } from "react-router-dom";
 
 function Asset() {
-
+ 
   return (
     <body className=' Asset'>
     <div>
