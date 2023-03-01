@@ -1,13 +1,13 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import "./ProductDealer.css";
-import Search from "../../Asset/Search.js";
-import Box from "../../Asset/Box";
-import Topbar from "../Repeated/Header";
-import Footer from "../../Asset/Footer";
-// import Bottom from "../components/Repeated/Footer";
+import Bottom from "../Repeated/Bottom";
+import Topbar from "../Repeated/Topbar";
+import Search from "../Repeated/Search";
+import "./Products.css";
+import { useNavigate } from "react-router-dom";
 
-function ProductDealer() {
+function Products() {
+  const navigate = useNavigate();
   return (
     <div>
       <>
@@ -20,9 +20,14 @@ function ProductDealer() {
 
         <h2 className="PL"> LIST OF PRODUCTS</h2>
         <br />
-
-        <Search />
-        <Box />
+        <div>
+          <Search />
+        </div>
+        <br />
+        <div className="product-btn">
+          <button onClick={() => navigate("CreateProduct")}>Add Product</button>
+          
+        </div>
         <br />
         <br />
 
@@ -40,7 +45,7 @@ function ProductDealer() {
                         <th class="column4">Models</th>
                         <th class="column5">Warranty Period (Years)</th>
                         <th class="column6">Retailer Name</th>
-                        <th class="column7">Edit</th>
+                        <th class="column7">view</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -52,7 +57,7 @@ function ProductDealer() {
                         <td class="column5">1</td>
                         <td class="column6">$999.00</td>
                         <td class="column7">
-                          <button>Edit</button>
+                          <button>view</button>
                         </td>
                       </tr>
                       <tr>
@@ -63,7 +68,7 @@ function ProductDealer() {
                         <td class="column5">1</td>
                         <td class="column6">$756.00</td>
                         <td class="column7">
-                          <button>Edit</button>
+                          <button>view</button>
                         </td>
                       </tr>
                       <tr>
@@ -74,7 +79,7 @@ function ProductDealer() {
                         <td class="column5">2</td>
                         <td class="column6">$44.00</td>
                         <td class="column7">
-                          <button>Edit</button>
+                          <button>view</button>
                         </td>
                       </tr>
                       <tr>
@@ -85,7 +90,7 @@ function ProductDealer() {
                         <td class="column5">3</td>
                         <td class="column6">$30.00</td>
                         <td class="column7">
-                          <button>Edit</button>
+                          <button>view</button>
                         </td>
                       </tr>
                     </tbody>
@@ -97,12 +102,11 @@ function ProductDealer() {
         </div>
       </div>
       <>
-        {/* <Bottom /> */}
-        <Footer />
+        <Bottom />
       </>
     </div>
   );
 }
 console.log(Table);
 
-export default ProductDealer;
+export default Products;
