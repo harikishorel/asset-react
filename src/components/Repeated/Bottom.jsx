@@ -1,7 +1,7 @@
 import React from "react";
-import "./Footer.css";
+import "./Bottom.css";
 
-function Footer() {
+function Bottom() {
   return (
     <body className="Footer">
       <div>
@@ -104,4 +104,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Bottom;

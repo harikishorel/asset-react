@@ -1,28 +1,33 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import "./ProductDealer.css";
-import Search from "../../Asset/Search.js";
-import Box from "../../Asset/Box";
-import Topbar from "../Repeated/Header";
-import Footer from "../../Asset/Footer";
-// import Bottom from "../components/Repeated/Footer";
+import Bottom from "../Repeated/Bottom";
+import Topbar from "../Repeated/Topbar";
+import Search from "../Repeated/Search";
+import "./Products.css";
+// import Oneline from "../Repeated/Oneline";
+// import { useNavigate } from "react-router-dom";
 
-function ProductDealer() {
+function Products() {
+  // const navigate = useNavigate();
   return (
     <div>
       <>
         <Topbar />
       </>
 
-      <div className=" product">
+      <div className="product">
         <br />
         <br />
 
         <h2 className="PL"> LIST OF PRODUCTS</h2>
         <br />
-
-        <Search />
-        <Box />
+        <div>
+          <Search />
+        </div>
+        <br />
+        <div className="product-btn">
+          <button>Add Product</button>
+        </div>
         <br />
         <br />
 
@@ -97,12 +102,11 @@ function ProductDealer() {
         </div>
       </div>
       <>
-        {/* <Bottom /> */}
-        <Footer />
+        <Bottom />
       </>
     </div>
   );
 }
 console.log(Table);
 
-export default ProductDealer;
+export default Products;

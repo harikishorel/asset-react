@@ -1,0 +1,142 @@
+.CD1 {
+  background: #e8e8e8 100%;
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+input {
+  width: 280px;
+  height: 50px;
+  padding: 16px;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid #fe4567;
+  color: #000000;
+  animation: shake_541 0.14s 3;
+}
+
+.input1 {
+  width: 280px;
+  height: 50px;
+  padding: 16px;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid #fe4567;
+  color: #000000;
+  animation: shake_541 0.14s 3;
+}
+
+input:valid {
+  border-color: #4d4c4c;
+  animation: none;
+}
+
+@keyframes shake_541 {
+  0%,
+  100% {
+    translate: 0;
+  }
+
+  25% {
+    translate: 8px 0;
+  }
+
+  75% {
+    translate: -8px 0;
+  }
+}
+
+.box-cont-B {
+  background-color: rgb(218, 3, 3);
+  color: #e21c1c;
+  opacity: 60%;
+  margin: 0 auto;
+  max-width: 850px;
+
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #afacac, -5px -5px 15px #b8b3b3;
+}
+.conton1 {
+  padding-left: 110px;
+  max-width: 400px;
+}
+
+.conton2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: -250px;
+  padding-right: 110px;
+}
+
+.btn1 {
+  width: fit-content;
+  height: 45px;
+  background: #ffffff0d;
+  border-radius: 8px;
+  border: 2px solid rgb(117, 117, 117);
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+.btn1:before {
+  width: 50%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  background: rgb(117, 117, 117);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.btn1:after {
+  width: 50%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+
+  background: rgb(117, 117, 117);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.btn1:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.btn1:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.btn1:hover:after {
+  top: 0;
+  left: 50%;
+}
+
+/* style={{ backgroundColor: 'red', color: 'black', }} */
+
+.btndiv {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,18 @@
+.foot {
+  background: #222;
+  color: #ffffff;
+  /* padding-top: 10px; */
+}
+
+.copyright {
+  padding: 15px 0;
+  background: #d99ee7;
+  margin-top: -10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright span {
+  color: #001aff;
+}
