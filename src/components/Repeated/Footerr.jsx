@@ -5,9 +5,7 @@ function Footerr() {
   return (
     <div>
       <footer className="foot">
-        <div class="copyright">
-          Copyright &copy; 2023 <span>Your Template Name</span>
-        </div>
+        <div class="copyright">Copyright &copy; 2023 | Your Template Name</div>
       </footer>
     </div>
   );
