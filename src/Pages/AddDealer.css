@@ -65,30 +65,8 @@ input {
   font-weight: bolder;
   color: rgb(0, 0, 0);
 }
-/* .bt3 {
-  font-size: 17px;
-  padding: 0.5em 2em;
-  border: transparent;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  background: dodgerblue;
-  color: white;
-  border-radius: 4px;
-}
 
-.bt3:hover {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(30, 144, 255, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
-
-.bt3:active {
-  transform: translate(0em, 0.2em);
-} */
-
-.bt {
+.btD {
   width: 100%;
   height: 45px;
   background: #ffffff0d;
@@ -106,7 +84,7 @@ input {
   margin: auto;
 }
 
-.bt:before {
+.btD:before {
   width: 50%;
   height: 100%;
   content: "";
@@ -119,7 +97,7 @@ input {
   z-index: -1;
 }
 
-.bt:after {
+.btD:after {
   width: 50%;
   height: 100%;
   content: "";
@@ -132,17 +110,17 @@ input {
   z-index: -1;
 }
 
-.bt:hover {
+.btD:hover {
   color: ghostwhite;
   cursor: pointer;
 }
 
-.bt:hover:before {
+.btD:hover:before {
   top: 0;
   left: 0;
 }
 
-.bt:hover:after {
+.btD:hover:after {
   top: 0;
   left: 50%;
 }

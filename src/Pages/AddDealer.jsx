@@ -73,7 +73,7 @@ const AddDealer = () => {
                 //   }}
               />
               <br />
-              <button className="bt" type="submit">
+              <button className="btD" type="submit">
                 Add Dealer
               </button>
               <br />
