@@ -6,7 +6,7 @@ import Products from "./Products";
 import CreateDealer from "../InputPage/CreateDealer";
 import ViewPage from "./ViewPage";
 import LoginPage from "../../Asset/LoginPage";
-import AddDealer from "../../Pages/AddDealer";
+import AddDealer from "../../Dealer/AddDealer";
 
 const App = () => {
   return (

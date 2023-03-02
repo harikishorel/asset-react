@@ -153,6 +153,7 @@ input {
   background-image: url(../common/wave.png);
   background-size: cover;
   padding-bottom: 180px;
+  /* image color : rgba(93, 68, 167, 1), rgba(51, 51, 60, 1) */
 }
 
 .head {
