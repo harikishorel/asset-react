@@ -9,6 +9,8 @@ import CreateDealer from "../InputPage/CreateDealer";
 import Popup from "../InputPage/popup";
 import Deal from "../../Mongo/AddDealer";
 import Manufacture from "../../Asset/Manufacture";
+import CreateStock from "../InputPage/CreateStock";
+import Stock from "../InputPage/Stock";
 
 
 
@@ -28,6 +30,9 @@ const App = () => {
           <Route path="/popup" element={<Popup />} />
           <Route path="/AddDealer" element={<Deal />} />
           <Route path="/Manufacture" element={<Manufacture />} />
+          <Route path="/CreateStock" element={<CreateStock />} />
+          <Route path="/AddStock" element={<CreateStock />} />
+          <Route path="/Stock" element={<Stock />} />
           
       </Routes>
     </div>
