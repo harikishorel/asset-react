@@ -6,9 +6,17 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import HomeAnim from "./HomeAnim";
 import Footer from "./Footer";
+import { useDispatch } from 'react-redux';
+import { login } from '../auth';
+
+
+
 
 const Login = () => {
-    const history = useNavigate();
+const  [name,setName] = useState("")
+
+  const dispatch = useDispatch();
+  const history = useNavigate();
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
 
@@ -20,7 +28,8 @@ const Login = () => {
              })
              .then(res=>{
                 if(res.data=="exist"){
-                   history('/home',{state:{id:email}})
+                  dispatch(login(email));
+                  history('/home',{state:{id:email}})
                              
                 }
                 else if(res.data=="notexist"){
@@ -80,16 +89,19 @@ const Login = () => {
 
           {/* <button className= "link-btn" onClick={()=>props.onFormSwitch('register')} >Don't have a account? Register Here</button> */}
         </div>
-        <img
+        <div className="l-img">       
+          <img
           className="l-img"
           src="https://d38cf3wt06n6q6.cloudfront.net/tyasuitefront/webgpcs/images/asset-management-software.png"
         />
+        </div>
+
         <br/>
-        <div>
+        <div className="content">
         <h2 className="content">"Welcome to great karikalan magic show"</h2>
         </div>
       </body>
-      <h2 className="content">"Welcome to great karikalan magic show"</h2>
+     
     </div>
     <Footer /> 
     </div>

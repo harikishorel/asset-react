@@ -1,4 +1,4 @@
-button {
+.box-b {
   width: fit-content;
   height: 45px;
   background: #ffffff0d;
@@ -23,7 +23,7 @@ button {
   margin-top: -42.8px;
 }
 
-button:before {
+.box-b:before {
   width: 50%;
   height: 100%;
   content: "";
@@ -36,7 +36,7 @@ button:before {
   z-index: -1;
 }
 
-button:after {
+.box-b:after {
   width: 50%;
   height: 100%;
   content: "";
@@ -49,17 +49,17 @@ button:after {
   z-index: -1;
 }
 
-button:hover {
+.box-b:hover {
   color: white;
   cursor: pointer;
 }
 
-button:hover:before {
+.box-b:hover:before {
   top: 0;
   left: 0;
 }
 
-button:hover:after {
+.box-b:hover:after {
   top: 0;
   left: 50%;
 }

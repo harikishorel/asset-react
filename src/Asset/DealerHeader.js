@@ -20,17 +20,12 @@ function Header() {
       <nav className="nav-bar" >
         <ul>
           <li>
-            <a href="#" style={{ fontFamily: 'Axiforma' }} className="active">Product</a>
+            <a href="#" style={{ fontFamily: 'Axiforma' }} className="active">Stock</a>
           </li>
           <li>
-            <a href="#" style={{ fontFamily: 'Axiforma' }} className="active">Dealer</a>
+            <a href="#" style={{ fontFamily: 'Axiforma' }} className="active">Logout</a>
           </li>
-          <li>
-            <a href="#" style={{ fontFamily: 'Axiforma' }} className="active">Enroll</a>
-          </li>
-          <li>
-            <a href="#"  style={{ fontFamily: 'Axiforma' }}className="active">Stock</a>
-          </li>
+         
         </ul>
       </nav>
     </header>

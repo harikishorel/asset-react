@@ -6,7 +6,7 @@
   justify-content: center;
   justify-content: space-evenly;
   background: linear-gradient(269.26deg,#4fbec2 6.59%,#3643d1 80.04%);
-  /* padding-right: 600px; */
+  padding-left: 150px;
 }
 
 .auth-form-container, .login-form, .register-form{
@@ -83,8 +83,14 @@ input{
 .l-img{
   
 
- opacity: 90%;
-  padding-right: 50px;
-  width: 400px;
-  height: 450px;
+
+ padding-left: 200px;
+ padding-bottom: 200px;
+  width: 500px;
+  height: 500px;
+}
+
+.content{
+  padding-top:250px ;
+  padding-right: 200px;
 }

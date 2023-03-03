@@ -8,7 +8,10 @@ import Footer from './Footer'
 import Asset from './Asset'
 import ProductDealer from "./ProductDealer";
 import Dealer from "./Dealer";
-
+import Manufacturelanding from "./Manufacture-landing";
+import Addproduct from "./Addproduct";
+import ManuEdit from "./ManuEdit";
+import DealersPage from "./DealersPage";
 
 
 function App() {
@@ -24,8 +27,14 @@ function App() {
         
       <Route path="/" element={<Login/>}/>
       <Route path="/home" element={<Asset/>}/>
+      <Route path ="/addproduct" element={<Addproduct/>} />
+      <Route path ="/editproduct" element={<DealersPage/>} />
+
       </Routes>
   {/* <Header/> */}
+  {/* <Login/> */}
+  {/* <Addproduct1 /> */}
+  {/* <ManuEdit /> */}
     </div>
   );
 }

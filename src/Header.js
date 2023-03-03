@@ -1,47 +1,29 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import './Header.css'
 
-function Header() {
+
+
+function header() {
   return (
-    <div>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <br />
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+  	<header class="header">
+		<h1 class="logo"><a href="#">Assetwarranty</a></h1>
+      <ul class="main-nav">
+        <div class="dropdown">
+          
+          <a href="#" class='profile'>Profile</a>
+          <div class="menu">
+<a href = "#">  Product</a>
+<a href = "#">Dealer</a>
+<a href = "#">Enroll</a>
+          </div>
+          </div>
+      </ul>+
+	</header> 
 
-      <br />
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
-    </div>
-  )
+
+  );
 }
 
-export default Header
+export default header;

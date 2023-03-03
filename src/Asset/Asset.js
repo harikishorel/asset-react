@@ -5,11 +5,14 @@ import Header from './Header'
 import Search from './Search.js'
 import Box from './Box'
 import { useLocation } from "react-router-dom";
+import DealerHeader from './DealerHeader'
 
 function Asset() {
  
   return (
     <body className=' Asset'>
+      <DealerHeader />
+
     <div>
       <br/><br/>
       <h2 className='PL'> LIST OF PRODUCTS</h2><br/>
