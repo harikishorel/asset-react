@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import axios from './axios';
 import Header from './Header';
 import './font.css';
+import './font2.css'
 
 
 function Addproduct() {
@@ -30,7 +31,7 @@ const addproduct =(e)=>{
   return (
     <div>
     <Header/>
-    <div className='Add-list'>
+    <div className='Add-list' style={{ fontFamily: 'Helvetica Now' }}>
    <form class="form-horizontal" >
 <legend className='p1'> ADD PRODUCTS</legend>
 <form className='proform'>

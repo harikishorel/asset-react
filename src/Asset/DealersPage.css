@@ -1,64 +1,74 @@
-.boxcont2 {
+.table-container {
   background-color: #ffffff;
   color: #080808;
-  max-width: 60%;
+  max-width: 80%;
   text-align: center;
-  box-shadow: 0 24px 64px #26214a1a;
+  /* box-shadow: 0 24px 64px #26214a1a; */
   border-radius: 12px;
   display: flex;
   margin: auto;
-}
-.table-container {
-  width: 70%;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 70px;
 }
 
 .table {
-  width: 100%;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
   border-collapse: collapse;
 }
 
 .table th {
   padding: 8px;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
-}
-.table td {
-  padding: 8px;
-  text-align: left;
-  color: #000000;
-  border-bottom: 1px solid #020202;
+  font-weight: bold;
+  background-color: #000000;
 }
 
-.table th {
-  background-color: #000000;
-  font-weight: bold;
+.table td {
+  padding: 5px;
+  text-align: center;
+  color: #000000;
+  border-bottom: 1px solid #020202;
 }
 
 .table tr:last-child td {
   border-bottom: none;
 }
 
-.bottom {
-  margin-bottom: auto;
+.Edit-btn {
+  font-size: 17px;
+  padding: 0.5em 1em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
 }
 
-.bttn {
-  display: flex;
-  margin: auto;
+.Edit-btn:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
 }
-.btn2{
-  width: fit-content;
-  height: 45px;
-  background: #ffffff0d;
-  border-radius: 8px;
-  border: 2px solid rgb(117, 117, 117);
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  position: relative;
-  overflow: hidden;
-  padding: 10px 25px;
-  z-index: 1;
+
+.Edit-btn:active {
+  transform: translate(0em, 0.2em);
+}
+
+@media only screen and (max-width: 768px) {
+  .table-container {
+    max-width: 100%;
+    padding: 40px;
   }
+}
+
+.head2 {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Axiforma;
+}
+
