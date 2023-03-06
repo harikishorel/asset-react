@@ -1,14 +1,12 @@
 .boxcont1 {
   background-color: #ffffff;
   color: #080808;
-  /* opacity: 60%; */
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 100%;
   text-align: center;
-  box-shadow: 0 24px 64px #26214a1a;
+  /* box-shadow: 0 24px 64px #26214a1a; */
   border-radius: 12px;
-  /* padding: 30px 60px;
-    position: relative; */
+  /* position: relative; */
 }
 .Email-btn {
   font-family: "Montserrat", sans-serif;
@@ -124,11 +122,6 @@ input {
   top: 0;
   left: 50%;
 }
-.img {
-  background-image: url(../common/wave.png);
-  background-size: cover;
-  padding-bottom: 180px;
-}
 
 .head {
   padding-left: 30px;
@@ -140,4 +133,53 @@ input {
   font-size: small;
   display: flex;
   justify-content: center;
+}
+.label2,
+.switch,
+.toggle {
+  height: 2.8rem;
+  border-radius: 100px;
+}
+
+.label2 {
+  width: 100%;
+  align-items: center;
+  background-color: #d6e5f1;
+  border-radius: 100px;
+  position: relative;
+  /* margin: 1.8rem 0 4rem 0; */
+  cursor: pointer;
+}
+
+.switch {
+  display: none;
+}
+
+.toggle {
+  position: absolute;
+  width: 50%;
+  margin: -3px;
+  background-color: #ffffff;
+  /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.switch:checked + .toggle {
+  transform: translateX(100%);
+}
+
+.names {
+  font-size: 90%;
+  font-weight: bolder;
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 5px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.dark {
+  opacity: 0.5;
 }

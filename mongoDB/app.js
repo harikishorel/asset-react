@@ -45,7 +45,7 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.post("/AddDealer", async (req, res) => {
+app.post("/Dealers", async (req, res) => {
   const { name, demail, branch, dpassword } = req.body;
   const newDealer = new addDealer({
     name,
@@ -55,7 +55,7 @@ app.post("/AddDealer", async (req, res) => {
   });
   try {
     await newDealer.save();
-    res.json({ status: 200, message: "Dealer Added Successfully" });
+    res.json({ status: 200, message: "success" });
   } catch (e) {
     console.error(e);
     res.status(500).json("Failed to add product");

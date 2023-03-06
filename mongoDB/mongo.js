@@ -24,19 +24,19 @@ const newSchema = new mongoose.Schema({
 const dealerSchema = new mongoose.Schema({
   name: {
     type: String,
-    // required: true,
+    required: true,
   },
   demail: {
     type: String,
-    // required: true,
+    required: true,
   },
   branch: {
     type: String,
-    // required: true,
+    required: true,
   },
   dpassword: {
     type: String,
-    // required: true,
+    required: true,
   },
 });
 

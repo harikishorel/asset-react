@@ -46,7 +46,7 @@ const LoginPage = () => {
         <div className="cont-1">
           <div className="img">
             <br />
-            <div className="boxcont1">
+            <div className="boxcont">
               <br />
               <h2 className="title">Welcome</h2>
 
