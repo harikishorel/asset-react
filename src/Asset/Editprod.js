@@ -7,12 +7,15 @@ import { Modal, ModalBody } from 'react-bootstrap';
 function Editprod({ product, onClose }) {
   const [productName, setProductName] = useState(product.productName);
   const [productDes, setProductDes] = useState(product.productDes);
+  const [status, setStatus] = useState(product.status);
+
 
   const handleSave = async () => {
     try {
       await axios.put(`/editProduct/${product._id}`, {
         productName,
         productDes,
+        status,
       });
       onClose();
     } catch (e) {
@@ -26,7 +29,7 @@ function Editprod({ product, onClose }) {
       <form className="form-product">
         <legend className='p1' style={{ fontFamily: 'Helvetica Now' }}> EDIT PRODUCTS</legend>
         <div className='proform'>
-          <label className='editname'style={{ fontFamily: 'Helvetica Now' }} htmlFor="product_id">PRODUCT NAME </label>
+          <label className='editname' style={{ fontFamily: 'Helvetica Now' }} htmlFor="product_id">PRODUCT NAME </label>
           <input
             className='p2 form-control input-md'
             id="product_id"
@@ -49,7 +52,32 @@ function Editprod({ product, onClose }) {
               onChange={(e) => setProductDes(e.target.value)}
             />
           </div>
-
+          <div className="wrapper">
+            <input
+              type="radio"
+              name="status"
+              id="active"
+              value="true"
+              checked={status === true}
+              onChange={() => setStatus(true)}
+            />
+            <label className="option" htmlFor="active">
+              <div className="dot"></div>
+              <span>Active</span>
+            </label>
+            <input
+              type="radio"
+              name="status"
+              id="inactive"
+              value="false"
+              checked={status === false}
+              onChange={() => setStatus(false)}
+            />
+            <label className="option" htmlFor="inactive">
+              <div className="dot"></div>
+              <span>Inactive</span>
+            </label>
+          </div>
           <button id="singlebutton"  name="singlebutton" className="add-btn" onClick={handleSave}>Save</button>
           <button id="singlebutton" name="singlebutton" className="add-btn" onClick={onClose}>Close</button>
 

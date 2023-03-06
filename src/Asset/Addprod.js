@@ -44,7 +44,6 @@ function Addprod() {
         {products &&
           products.data.map((product) => (
             <Dropdown.Item
-              href="#/action-1"
               active={selectedProduct === product}
               onClick={() => handleSelectProduct(product)}
             >
@@ -60,7 +59,6 @@ function Addprod() {
             name="product_id"
             placeholder="Name"
             type="text"
-            value="Id"
           />
 
           <div className='add2'>
@@ -70,9 +68,8 @@ function Addprod() {
               id="product_name"
               name="product_name"
               placeholder="Description"
-              type="textarea"
-              value="Model"
-            />
+              type="text"
+              />
           </div>
 
           <button id="singlebutton"  name="singlebutton" className="add-btn" >Add</button>
