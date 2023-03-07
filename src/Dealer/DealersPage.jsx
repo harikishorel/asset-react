@@ -3,7 +3,7 @@ import Topbar from "../components/Repeated/Topbar";
 import axios from "../axios";
 import "./DealersPage.css";
 import { useNavigate } from "react-router-dom";
-import Footerr from "../components/Repeated/Footerr";
+// import Footerr from "../components/Repeated/Footerr";
 import { Modal, ModalBody } from "react-bootstrap";
 import EditDealer from "./EditDealer";
 
