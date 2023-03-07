@@ -21,27 +21,6 @@ const newSchema = new mongoose.Schema({
   },
 });
 
-const dealerSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  demail: {
-    type: String,
-    required: true,
-  },
-  branch: {
-    type: String,
-    required: true,
-  },
-  dpassword: {
-    type: String,
-    required: true,
-  },
-});
-
 const collection = mongoose.model("Collection", newSchema);
-const addDealer = mongoose.model("AddDealer", dealerSchema);
 
 module.exports = collection;
-module.exports = addDealer;

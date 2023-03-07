@@ -7,6 +7,8 @@ import CreateDealer from "../InputPage/CreateDealer";
 import ViewPage from "./ViewPage";
 import LoginPage from "../../Asset/LoginPage";
 import DealersPage from "../../Dealer/DealersPage";
+import AddDealer from "../../Dealer/AddDealer";
+import EditDealer from "../../Dealer/EditDealer";
 
 const App = () => {
   return (
@@ -14,7 +16,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/ViewPage" element={<ViewPage />} />
-        <Route path="/Dealers" element={<DealersPage />} />
+        <Route path="/dealers" element={<DealersPage />} />
+        <Route path="/AddDealer" element={<AddDealer />} />
+        <Route path="/EditDealer" element={<EditDealer />} />
         <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/LandingPage/Products" element={<Products />} />
         <Route path="/LandingPage/Dealers" element={<Dealers />} />

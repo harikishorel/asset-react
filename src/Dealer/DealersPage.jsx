@@ -1,102 +1,100 @@
-import React, { useState } from "react";
-// import Topbar from "../components/Repeated/Topbar";
-// import { useNavigate } from "react-router-dom";
-// import Footerr from "../components/Repeated/Footerr";
+import React, { useState, useEffect } from "react";
+import Topbar from "../components/Repeated/Topbar";
+import axios from "../axios";
 import "./DealersPage.css";
-import AddDealer from "./AddDealer";
+import { useNavigate } from "react-router-dom";
+import Footerr from "../components/Repeated/Footerr";
+import { Modal, ModalBody } from "react-bootstrap";
+import EditDealer from "./EditDealer";
 
 function DealersPage() {
-  const [show, onHide] = useState(false);
+  const navigate = useNavigate();
+  const [showEditDealer, setShowEditDealer] = useState(false);
+  const [selectedDealer, setSelectedDealer] = useState({});
+  const [dealers, setDealers] = useState("");
 
-  const handleOpenModal = () => {
-    onHide(true);
+  const handleEdit = (dealer) => {
+    setSelectedDealer({
+      ...dealer,
+      status: dealer.status ? "Active" : "Inactive",
+    });
+    setShowEditDealer(true);
   };
-  const handleCloseModal = () => {
-    onHide(false);
-  };
-  // const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchdata = async () => {
+      const data = await axios.get("/dealers");
+      setDealers(data);
+    };
+    fetchdata();
+  }, []);
+
   return (
     <div>
-      {/* <Topbar /> */}
+      <Topbar />
 
       <br />
-      <div className="boxcont2">
+      <div>
+        <button
+          className="Edit-btn"
+          style={{ display: "flex", margin: "auto" }}
+          onClick={() => navigate("/AddDealer")}
+        >
+          Add Dealer
+        </button>
+      </div>
+      <br />
+      <div>
         <div class="table-container">
           <table class="table">
             <thead>
               <tr>
+                <th>Dealer Name</th>
                 <th>Dealer Email</th>
                 <th>Branch Name</th>
-                <th>Dealer Name</th>
                 <th>Status</th>
                 <th>Edit Dealer</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>example@gmail.com</td>
-                <td>examplebranch</td>
-                <td>examplename</td>
-                <td>active</td>
-                <td>
-                  <button>Edit</button>
-                </td>
-              </tr>
-              <tr>
-                <td>example@gmail.com</td>
-                <td>branchname</td>
-                <td>examplename</td>
-                <td>active</td>
-                <td>
-                  <button>Edit</button>
-                </td>
-              </tr>
-              <tr>
-                <td>example@gmail.com</td>
-                <td>examplebranch</td>
-                <td>examplename</td>
-                <td>active</td>
-                <td>
-                  <button>Edit</button>
-                </td>
-              </tr>
-              <tr>
-                <td>example@gmail.com</td>
-                <td>examplebranch</td>
-                <td>examplename</td>
-                <td>active</td>
-                <td>
-                  <button>Edit</button>
-                </td>
-              </tr>
-              <tr>
-                <td>example@gmail.com</td>
-                <td>examplebranch</td>
-                <td>examplename</td>
-                <td>active</td>
-                <td>
-                  <button>Edit</button>
-                </td>
-              </tr>
+              {dealers &&
+                dealers.data.map((dealer) => (
+                  <tr key={dealer._id}>
+                    <td>{dealer.demail}</td>
+                    <td>{dealer.name}</td>
+                    <td>{dealer.branch}</td>
+                    <td>{dealer.status ? "Active" : "Inactive"}</td>
+                    <td>
+                      <button
+                        onClick={() => handleEdit(dealer)}
+                        className="Edit-btn"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
       </div>
       <br />
-      <div>
-        <button
-          className="btn2"
-          style={{ backgroundColor: "BLUE", margin: "0px 0px 0px 100px " }}
-          onClick={handleOpenModal}
-        >
-          Add Dealer
-        </button>
-        <AddDealer show={show} onHide={handleCloseModal} />
-      </div>
+
       <br />
 
       <br />
-      <div className="bottom">{/* <Footerr /> */}</div>
+      {/* <div className="bottom">
+        <Footerr />
+      </div> */}
+
+      <Modal show={showEditDealer} onHide={() => setShowEditDealer(false)}>
+        <ModalBody>
+          <EditDealer
+            dealer={selectedDealer}
+            onClose={() => setShowEditDealer(false)}
+          />
+        </ModalBody>
+      </Modal>
     </div>
   );
 }

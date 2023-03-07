@@ -1,12 +1,23 @@
 .boxcont1 {
-  background-color: #ffffff;
+  /* background-color: #ffffff;
   color: #080808;
   margin: 0 auto;
   max-width: 100%;
-  text-align: center;
+  text-align: center; */
   /* box-shadow: 0 24px 64px #26214a1a; */
-  border-radius: 12px;
+  /* border-radius: 12px; */
   /* position: relative; */
+
+  background-color: #ffffff;
+  color: #080808;
+  /* opacity: 60%; */
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 24px 64px #26214a1a;
+  border-radius: 12px;
+  /* padding: 30px 60px;
+    position: relative; */
 }
 .Email-btn {
   font-family: "Montserrat", sans-serif;

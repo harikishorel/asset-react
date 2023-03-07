@@ -1,7 +1,9 @@
+// import addDealer from "./mongo";
+
 const express = require("express");
 const collection = require("./mongo");
 const cors = require("cors");
-const addDealer = require("./mongo");
+const AddDealer = require("./Dealers");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -45,9 +47,9 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.post("/Dealers", async (req, res) => {
+app.post("/AddDealer", async (req, res) => {
   const { name, demail, branch, dpassword } = req.body;
-  const newDealer = new addDealer({
+  const newDealer = new AddDealer({
     name,
     demail,
     branch,
@@ -59,6 +61,48 @@ app.post("/Dealers", async (req, res) => {
   } catch (e) {
     console.error(e);
     res.status(500).json("Failed to add product");
+  }
+});
+
+app.get("/dealers", (req, res) => {
+  AddDealer.find((err, data) => {
+    if (err) {
+      // console.log(err);
+
+      res.status(500).send(err);
+    } else {
+      // console.log(data);
+
+      res.status(200).send(data);
+    }
+  });
+});
+
+app.put("/dealers/:id", async (req, res) => {
+  const { name, branch, status } = req.body;
+  const dealerId = req.params.id;
+
+  try {
+    const updatedDealer = await AddDealer.findByIdAndUpdate(
+      dealerId,
+      {
+        name,
+        branch,
+        status,
+      },
+      { new: true }
+    );
+
+    if (!updatedDealer) {
+      return res.status(404).json({ message: "Dealer not found" });
+    }
+
+    res
+      .status(200)
+      .json({ status: 200, message: "Dealer updated successfully" });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ message: "Failed to update Dealer" });
   }
 });
 

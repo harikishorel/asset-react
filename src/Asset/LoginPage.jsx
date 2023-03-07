@@ -19,9 +19,9 @@ const LoginPage = () => {
           password,
         })
         .then((res) => {
-          if (res.data == "exist") {
+          if (res.data === "exist") {
             history("/LandingPage", { state: { id: email } });
-          } else if (res.data == "notexist") {
+          } else if (res.data === "notexist") {
             alert("There is no such user");
           }
         })
@@ -43,7 +43,7 @@ const LoginPage = () => {
       <br />
       <div>
         <br />
-        <div className="cont-1">
+        <div>
           <div className="img">
             <br />
             <div className="boxcont">
